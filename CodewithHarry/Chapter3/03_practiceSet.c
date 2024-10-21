@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 // Pass_Fail function
 void passFail()
@@ -58,12 +59,54 @@ void incomeTax(){
     printf("The income tax to be paid is: %.2f Lakhs\n", tax); 
 }
 
+void leapYear(){
+
+    printf("This program is to print a year is leap year or not \n");
+
+    int userYear;
+
+    printf("\n");
+
+    printf("Enter your Year: ");
+    scanf("%d", &userYear);
+
+    if (userYear%400 == 0){
+        printf("The year entered %d is a Leap Year ", userYear);
+    }else{
+        printf("It is not a Leap Year");
+    }
+}
+
+void lowerCaseUpperCase(){
+
+    printf("Program to determine char entered is Lower or Upper");
+
+    printf("\n");
+
+    char userChar;
+
+    printf("Enter your Char: ");
+    scanf("%c", &userChar);
+
+    if(isupper(userChar)){
+        printf("%c is an upperCase letter", userChar);
+    }else if(islower(userChar)){
+        printf("%c is lowerCase letter", userChar);
+    }else {
+        printf("%c is not an alphabetic character",userChar);
+    }
+}
+
 int main()
 {
     //Calling the function
-    passFail();
+    // passFail();
 
-    incomeTax();
+    // incomeTax();
+
+    // leapYear();
+
+    // lowerCaseUpperCase();
 
     return 0;
 }
