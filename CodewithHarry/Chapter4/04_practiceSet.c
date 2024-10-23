@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 
 //program to print Table
 void printTable(){
@@ -210,6 +211,57 @@ void sumFactorial2(){
     printf("Sum of factorials of %d = %d", n , sum);
 }
 
+// Program to check a number is prime or not (Using for-loop)
+void primeNot1(){
+
+    printf("Program to chheck a number is prime or not \n");
+    printf("\n");
+
+    int n;
+    printf("Enter a number to check a number is Prime or Not \n");
+    scanf("%d",&n);
+
+    if(n <= 1){
+        printf("You have entered, A number less than 1 or 1(Which is not prime) \n");
+        return;
+    } 
+
+    for(int i = 2; i <= sqrt(n); i++){
+        if(n%i == 0){
+            printf("It is a not Prime Number: ");
+            return;
+        }
+    }
+    printf("Number %d is a Prime Number: ",n);
+}
+
+
+// Program to check a number is prime or not (While loop)
+void primeNot2(){
+
+    printf("Program to chheck a number is prime or not \n");
+    printf("\n");
+
+    int n;
+    printf("Enter a number to check a number is Prime or Not \n");
+    scanf("%d",&n);
+
+    if(n <= 1){
+        printf("You have entered, A number less than 1 or 1(Which is not prime) \n");
+        return;
+    } 
+
+    int i = 2;
+
+    do{
+        if(n%i == 0){
+            printf("Number %d is not a Prime number \n",n);
+            return;
+        }
+        i++;
+    }while(i <= sqrt(n));
+    printf("Number %d is a Prime Number\n",n); 
+}
 
 int main() {
 
@@ -225,7 +277,11 @@ int main() {
 
     // sumMultiples();
 
-    sumFactorial2();
+    // sumFactorial2();
+
+    primeNot2();
+
+
 
     return 0;
 }
