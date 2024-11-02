@@ -22,6 +22,13 @@ void oneSol(){
     printf("Element at (ptr + 6)/index[6] = %d\n", *(ptr+6));
 }
 
+void threeSol(){
+    printf("Program to store Multiplication table :\n\n");
+
+    
+
+}
+
 int main() {    
 
     oneSol();
